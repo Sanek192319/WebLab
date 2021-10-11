@@ -1,18 +1,26 @@
 .container {
   font-size: 20px;
+
+  /* height: 100vh; */
   height: 100vh;
-  width: 98vw;
+  max-width: 100%;
   display: grid;
   margin: 0;
   padding: 0;
   grid-gap: 5px;
   grid-template-columns: 25% 50% 25%;
-  grid-template-rows: 20% 50% 10% 20%;
+
+  /* grid-template-rows: 20% 50% 10% 20%; */
+  grid-template-rows: 20% min-content 10% 20%;
   grid-template-areas:
     "header header header"
     "left_aside main right_aside"
     "left_aside navigation right_aside"
     "left_aside footer footer";
+}
+
+:root {
+  --h1-bg-color: white;
 }
 
 .Text {
@@ -38,44 +46,34 @@
   font-size: 25px;
   height: 40%;
   width: 70%;
-  background-color: white;
+  background-color: var(--h1-bg-color);
   outline: 5px solid black; /* Чёрная рамка */
   border: 3px solid #fff;
 }
 
-.block2 {
-  padding-top: 10px;
-  text-align: left;
-  font-size: 25px;
-  height: 40%;
-  width: 70%;
-  background-color: white;
-  outline: 5px solid black; /* Чёрная рамка */
-  border: 3px solid #fff;
-}
-
-.Bady {
+body {
   margin: 0;
   padding: 0;
   background-color: black;
 }
 
 .header {
-  /* display: flex; */
-
-  /* flex-direction: column; */
-
-  /* align-items: center; */
-
-  /* justify-content: space-around; */
   display: grid;
   grid-template-columns: 70% 30%;
-
-  /* padding-top: 50px; */
-
-  /* padding-left: 70%; */
   background-color: #86beea;
   grid-area: header;
+  overflow: hidden;
+}
+
+nav ul {
+  padding: 0;
+  margin-top: 1%;
+  text-align: center;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .navigation {
@@ -83,66 +81,12 @@
   grid-area: navigation;
 }
 
-.left_aside {
+.left {
   background-color: #9bd6a3;
   grid-area: left_aside;
 }
 
-.right_aside {
-  background-color: #9bd6a3;
-  grid-area: right_aside;
-}
-
-.main {
-  background-color: #f5f0f0;
-  grid-area: main;
-}
-
-.main div {
-  margin-top: 1%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.Img img {
-  border: 5px solid #000;
-  background-color: #000;
-  height: 60%;
-  width: 70%;
-  margin-top: 1px;
-}
-
-.main div img {
-  border: 5px solid #000;
-  background-color: #000;
-  height: 40%;
-  width: 40%;
-  margin-top: 1px;
-}
-
-.main .Li img {
-  margin-left: 20%;
-  height: 300px;
-  width: 300px;
-}
-
-.footer {
-  /* display: flex; */
-
-  /* flex-direction: column; */
-
-  /* align-items: center; */
-
-  /* justify-content: space-around; */
-  display: grid;
-  grid-template-columns: 60% 40%;
-  background-color: #86beea;
-  grid-area: footer;
-}
-
-.Img {
+.left ul {
   margin: 5px;
   padding: 0;
   text-align: center;
@@ -153,37 +97,88 @@
   justify-content: space-around;
 }
 
-/* .Img2 >.Img img{
-  height: 100%;
-  width: 100%;
-} */
+.right {
+  background-color: #9bd6a3;
+  grid-area: right_aside;
+}
 
-.hr {
+.right ul {
+  margin: 5px;
   padding: 0;
-  margin-top: 1%;
   text-align: center;
-
-  /* margin-left: 0;
-    padding-left: 0; */
   list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+main {
+  background-color: #f5f0f0;
+  grid-area: main;
+}
+
+main div {
+  margin-top: 1%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
 }
 
-.hr li {
+ul img {
+  border: 5px solid #000;
+  background-color: #000;
+  height: 60%;
+  width: 70%;
+  margin-top: 1px;
+}
+
+main div img {
+  border: 5px solid #000;
+  background-color: #000;
+  height: 40%;
+  width: 40%;
+  margin-top: 1px;
+}
+
+main .li img {
+  margin-left: 20%;
+  height: 300px;
+  width: 300px;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  background-color: #86beea;
+  grid-area: footer;
+  overflow: hidden;
+}
+
+footer h1 {
+  padding-top: 10px;
+  text-align: left;
+  font-size: 25px;
+  height: 40%;
+  width: 70%;
+  background-color: var(--h1-bg-color);
+  outline: 5px solid black; /* Чёрная рамка */
+  border: 3px solid #fff;
+}
+
+nav ul li {
   border: 5px solid #000;
   padding: 10px;
   margin-right: 0;
 }
 
-.hr li:hover {
+nav ul li:hover {
   background: rgba(0, 0, 0, 0);
   color: #3a7999;
   box-shadow: inset 0 0 0 3px #3a7999;
 }
 
-.hr li a {
+nav ul li a {
   text-decoration: none;
 }
