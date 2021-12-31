@@ -1,16 +1,13 @@
-.container {
-  font-size: 20px;
 
-  /* height: 100vh; */
-  height: 100vh;
-  max-width: 100%;
+h1 {
+  font-size: 20px;
+  min-height: 100%;
+  max-width: 99%;
   display: grid;
   margin: 0;
   padding: 0;
   grid-gap: 5px;
   grid-template-columns: 25% 50% 25%;
-
-  /* grid-template-rows: 20% 50% 10% 20%; */
   grid-template-rows: 20% min-content 10% 20%;
   grid-template-areas:
     "header header header"
@@ -21,9 +18,13 @@
 
 :root {
   --h1-bg-color: white;
+  --body-bg-color: black;
+  --header-bg-color: #86beea;
+  --left-right-bg-color: #9bd6a3;
+  --hoover-color: #3a7999;
 }
 
-.Text {
+p {
   margin-top: 5px;
   padding-left: 5px;
   padding-right: 10px;
@@ -31,43 +32,42 @@
 
 .Text2 {
   margin-top: 20%;
-
-  /* text-align: center; */
+  margin-bottom: 30%;
   display: flex;
-
-  /* flex-direction: column; */
   align-items: center;
   justify-content: space-around;
 }
 
-.block {
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--body-bg-color);
+}
+
+header {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  background-color: var(--header-bg-color);
+  grid-area: header;
+  overflow: hidden;
+}
+
+header div {
+  margin-top: 20px;
   padding-top: 10px;
   text-align: right;
   font-size: 25px;
   height: 40%;
   width: 70%;
   background-color: var(--h1-bg-color);
-  outline: 5px solid black; /* Чёрная рамка */
-  border: 3px solid #fff;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  background-color: black;
-}
-
-.header {
-  display: grid;
-  grid-template-columns: 70% 30%;
-  background-color: #86beea;
-  grid-area: header;
-  overflow: hidden;
+  outline: 5px solid var(--body-bg-color);
+  border: 3px solid var(--h1-bg-color);
 }
 
 nav ul {
   padding: 0;
   margin-top: 1%;
+  margin-bottom: 10%;
   text-align: center;
   list-style-type: none;
   display: flex;
@@ -77,12 +77,12 @@ nav ul {
 }
 
 .navigation {
-  background-color: #f5f0f0;
+  background-color: var(--h1-bg-color);
   grid-area: navigation;
 }
 
 .left {
-  background-color: #9bd6a3;
+  background-color: var(--left-right-bg-color);
   grid-area: left_aside;
 }
 
@@ -98,7 +98,7 @@ nav ul {
 }
 
 .right {
-  background-color: #9bd6a3;
+  background-color: var(--left-right-bg-color);
   grid-area: right_aside;
 }
 
@@ -114,12 +114,13 @@ nav ul {
 }
 
 main {
-  background-color: #f5f0f0;
+  background-color: var(--h1-bg-color);
   grid-area: main;
 }
 
 main div {
   margin-top: 1%;
+  margin-bottom: 10%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -127,16 +128,16 @@ main div {
 }
 
 ul img {
-  border: 5px solid #000;
-  background-color: #000;
+  border: 5px solid var(--body-bg-color);
+  background-color: var(--body-bg-color);
   height: 60%;
   width: 70%;
   margin-top: 1px;
 }
 
 main div img {
-  border: 5px solid #000;
-  background-color: #000;
+  border: 5px solid var(--body-bg-color);
+  background-color: var(--body-bg-color);
   height: 40%;
   width: 40%;
   margin-top: 1px;
@@ -144,39 +145,44 @@ main div img {
 
 main .li img {
   margin-left: 20%;
+  margin-top: 3%;
+
+  /* margin-bottom: 1%; */
   height: 300px;
   width: 300px;
 }
 
 .footer {
+  height: 100%;
   display: grid;
   grid-template-columns: 60% 40%;
-  background-color: #86beea;
+  background-color: var(--header-bg-color);
   grid-area: footer;
   overflow: hidden;
 }
 
-footer h1 {
+footer div {
+  margin-top: 20px;
   padding-top: 10px;
   text-align: left;
   font-size: 25px;
   height: 40%;
   width: 70%;
   background-color: var(--h1-bg-color);
-  outline: 5px solid black; /* Чёрная рамка */
-  border: 3px solid #fff;
+  outline: 5px solid var(--body-bg-color); /* Чёрная рамка */
+  border: 3px solid var(--h1-bg-color);
 }
 
 nav ul li {
-  border: 5px solid #000;
+  border: 5px solid var(--body-bg-color);
   padding: 10px;
   margin-right: 0;
 }
 
 nav ul li:hover {
   background: rgba(0, 0, 0, 0);
-  color: #3a7999;
-  box-shadow: inset 0 0 0 3px #3a7999;
+  color: var(--hoover-color);
+  box-shadow: inset 0 0 0 3px var(--hoover-color);
 }
 
 nav ul li a {
