@@ -1,4 +1,3 @@
-
 h1 {
   font-size: 20px;
   min-height: 100%;
@@ -141,6 +140,10 @@ main div img {
   height: 40%;
   width: 40%;
   margin-top: 1px;
+}
+
+main ol {
+  padding-bottom: 10%;
 }
 
 main .li img {
