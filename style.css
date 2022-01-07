@@ -16,7 +16,7 @@ body {
     "left_aside footer footer";
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
   body {
     grid-template-columns: 50% 50%;
     grid-template-rows: repeat(5, min-content);
