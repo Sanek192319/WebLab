@@ -1,4 +1,5 @@
-h1 {
+body {
+  background-color: var(--body-bg-color);
   font-size: 20px;
   min-height: 100%;
   max-width: 99%;
@@ -13,6 +14,19 @@ h1 {
     "left_aside main right_aside"
     "left_aside navigation right_aside"
     "left_aside footer footer";
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(5, min-content);
+    grid-template-areas:
+      "header header"
+      "left_aside right_aside"
+      "main main"
+      "navigation navigation"
+      " footer footer";
+  }
 }
 
 :root {
@@ -37,12 +51,6 @@ p {
   justify-content: space-around;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  background-color: var(--body-bg-color);
-}
-
 header {
   display: grid;
   grid-template-columns: 70% 30%;
@@ -52,7 +60,9 @@ header {
 }
 
 header div {
+  display: inline-block;
   margin-top: 20px;
+  margin-bottom: 20px;
   padding-top: 10px;
   text-align: right;
   font-size: 25px;
@@ -61,6 +71,21 @@ header div {
   background-color: var(--h1-bg-color);
   outline: 5px solid var(--body-bg-color);
   border: 3px solid var(--h1-bg-color);
+}
+
+@media screen and (max-width: 800px) {
+  nav ul {
+    padding: 0;
+    margin-top: 1%;
+    margin-bottom: 10%;
+    text-align: center;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+  }
 }
 
 nav ul {
@@ -149,8 +174,6 @@ main ol {
 main .li img {
   margin-left: 20%;
   margin-top: 3%;
-
-  /* margin-bottom: 1%; */
   height: 300px;
   width: 300px;
 }
@@ -165,14 +188,16 @@ main .li img {
 }
 
 footer div {
+  display: inline-block;
   margin-top: 20px;
   padding-top: 10px;
+  margin-bottom: 20px;
   text-align: left;
   font-size: 25px;
   height: 40%;
   width: 70%;
   background-color: var(--h1-bg-color);
-  outline: 5px solid var(--body-bg-color); /* Чёрная рамка */
+  outline: 5px solid var(--body-bg-color);
   border: 3px solid var(--h1-bg-color);
 }
 
