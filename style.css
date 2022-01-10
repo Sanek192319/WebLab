@@ -2,11 +2,10 @@ body {
   background-color: var(--body-bg-color);
   font-size: 20px;
   min-height: 100%;
-  max-width: 99.2%;
+  min-width: 100%;
   display: grid;
   margin: 0;
   padding: 0;
-  grid-gap: 5px;
   grid-template-columns: 25% 50% 25%;
   grid-template-rows: min-content min-content 80px min-content;
   grid-template-areas:
