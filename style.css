@@ -44,15 +44,16 @@ p {
 
 .Text2 {
   margin-top: 20%;
-  margin-bottom: 30%;
+  margin-bottom: 20%;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 
 header {
-  display: grid;
-  grid-template-columns: 70% 30%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   background-color: var(--header-bg-color);
   grid-area: header;
   overflow: hidden;
@@ -62,6 +63,7 @@ header div {
   display: inline-block;
   margin-top: 20px;
   margin-bottom: 20px;
+  margin-right: 10%;
   padding-top: 10px;
   text-align: right;
   font-size: 25px;
@@ -179,9 +181,10 @@ main .li img {
 }
 
 .footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   min-height: 100%;
-  display: grid;
-  grid-template-columns: 60% 40%;
   background-color: var(--header-bg-color);
   grid-area: footer;
   overflow: hidden;
@@ -192,10 +195,11 @@ footer div {
   margin-top: 20px;
   padding-top: 10px;
   margin-bottom: 20px;
+  margin-right: 14%;
   text-align: left;
   font-size: 25px;
   height: 60px;
-  width: 70%;
+  width: 90%;
   background-color: var(--h1-bg-color);
   outline: 5px solid var(--body-bg-color);
   border: 3px solid var(--h1-bg-color);
