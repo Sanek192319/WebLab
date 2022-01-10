@@ -7,7 +7,7 @@ body {
   margin: 0;
   padding: 0;
   grid-template-columns: 25% 50% 25%;
-  grid-template-rows: 18vh min-content 80px min-content;
+  grid-template-rows: minmax(min-content, 18vh) min-content 80px min-content;
   grid-template-areas:
     "header header header"
     "left_aside main right_aside"
