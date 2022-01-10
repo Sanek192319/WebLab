@@ -2,7 +2,7 @@ body {
   background-color: var(--body-bg-color);
   font-size: 20px;
   min-height: 100%;
-  max-width: 99%;
+  max-width: 99.2%;
   display: grid;
   margin: 0;
   padding: 0;
@@ -108,6 +108,7 @@ nav ul {
 .left {
   background-color: var(--left-right-bg-color);
   grid-area: left_aside;
+  min-height: 100vh;
 }
 
 .left ul {
